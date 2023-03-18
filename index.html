@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crush Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color: rgb(44, 43, 43);
+    
+        }
+       #name1,#f-name1,#f-name2,#f-name3,#f-name4{
+        border: 2px solid black;
+        background-color: black;
+        color: pink;
+        padding-left: 20px;
+       }
+       #dob1{
+        border: 2px solid black;
+        background-color: black;
+        color: pink;
+        padding-left: 20px;
+       }
+       #in-name,#in-name1,#in-name2,#in-name3,#in-name4{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: pink;
+        text-align: center;
+       }
+       #in-name:hover,#in-name1:hover,#in-name2:hover,#in-name3:hover,#in-name4:hover{
+        border-bottom: 1px solid pink;
+       }
+       #in-dob,#in-dob1,#in-dob2,#in-dob3,#in-dob4{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: pink;
+        text-align: center;
+       }
+       #in-dob:hover,#in-dob1:hover,#in-dob2:hover,#in-dob3:hover,#in-dob4:hover{
+        border-bottom: 1px solid pink;
+       }
+      .row{
+        margin: auto;
+        
+      }
+      #img1{
+        margin-top: 10px;
+        height: 50%;
+        width: 70%;
+        margin-left: 15%;
+      }
+      #C_names{
+        color: rgb(239, 111, 132);
+        text-align: center;
+        margin-top: 30px;
+      }
+      #submit{
+        margin-left: 10%;
+        margin-top: 30px;
+        height: 40px;
+        width: 100px;
+        border-radius:10px;
+        background-color:transparent;
+        border: 2px solid rgb(244, 97, 121);
+        color: rgb(244, 97, 121);
+      }
+
+      .box{
+        background-color: black;
+        margin-top: 10%;
+        height: 1000px;
+        width: 100%;
+      }
+       #p2{
+        text-align: center;
+        color: rgb(244, 97, 121);
+        padding-top: 200px;
+      }
+      #p1{
+        text-align: center;
+        color: rgb(244, 97, 121);
+        padding-top: 100px;
+      }
+
+
+      #namr-res1, #namr-res2, #namr-res3,#namr-res4{
+        height: 40px;
+        color: rgb(244, 97, 121);
+        text-align: right;
+      }
+      #z-sign1, #z-sign2, #z-sign3, #z-sign4{
+        
+        height: 40px;
+        color: rgb(244, 97, 121);
+        text-align: left;
+        padding-left: 10px;
+      }
+      #result{
+        text-align: center;
+        color: rgb(244, 97, 121);
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      #rst{
+        margin-left: 60%;
+        margin-top: 40px;
+        height: 40px;
+        width: 100px;
+        border-radius:10px;
+        background-color:transparent;
+        border: 2px solid rgb(244, 97, 121);
+        color: rgb(244, 97, 121);
+      }
+    </style>
+
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+    
+    <div class="container">
+        
+        <img class="col-sm-12" src="images/cf1.png" id="img1" alt="">
+        <div class="row">
+            <div class="col-sm-6" id="name1">Enter your Name:
+                <input type="text" id="in-name" placeholder="Your Name">
+            </div>
+            <div class="col-sm-6" id="dob1">Enter your DOB:
+                <input type="text" id="in-dob" placeholder="dd/mm/yyyy">
+            </div>
+            
+            <h2 class="col-sm-12" id="C_names">Enter the Name and DOB of your Friends</h2>
+            
+            
+            <div class="col-sm-6" id="f-name1">1:
+                <input type="text" id="in-name1" placeholder="Name 1">
+                <input type="text" id="in-dob1" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="col-sm-6" id="f-name2">2:
+                <input type="text" id="in-name2" placeholder="Name 2">
+                <input type="text" id="in-dob2" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="col-sm-6" id="f-name3">3:
+                <input type="text" id="in-name3" placeholder="Name 3">
+                <input type="text" id="in-dob3" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="col-sm-6" id="f-name4">4:
+                <input type="text" id="in-name4" placeholder="Name 4">
+                <input type="text" id="in-dob4" placeholder="dd/mm/yyyy">
+            </div>  
+
+            <button id="submit" >Submit</button>
+
+            <button id="rst" >Reset</button>
+            <div class="col-sm-12" id="p2"><h2>Your Zodiac Sign: </h2><h1 id="p3"></h1></div>
+            <div class="col-sm-12" id="p1"><h1>Zodiac sign of your Friends</h1></div>
+
+            <div class="col-sm-6">
+                <h2 id="namr-res1"></h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 id="z-sign1"></h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 id="namr-res2"></h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 id="z-sign2"></h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 id="namr-res3"></h2>
+            </div>
+            <div class="col-sm-6">
+                <h2 id="z-sign3"></h2>
+
+            </div>
+            <div class="col-sm-6">
+                <h2 id="namr-res4"></h2>
+
+            </div>
+            <div class="col-sm-6">
+                <h2 id="z-sign4"></h2>
+
+            </div>
+            <div class="col-sm-12">
+                <h1 id="result"></h1>
+             
+        </div>             
+    </div>
+</div> 
+<script src="crushfinder.js"></script>
+<script src="db.js"></script>
+</body>
+</html>
